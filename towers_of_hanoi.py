@@ -48,6 +48,14 @@ while right_stack.get_size() != num_disks:
         from_stack = get_input()
         print("\nWhich stack do you want to move to?")
         to_stack = get_input()
-        if 
+        if from_stack.is_empty():
+            print("\n\nInvalid Move. Try Again.")
+        elif to_stack.is_empty() or from_stack.peek() < to_stack.peek():
+            disk = from_stack.pop()
+            to_stack.push(disk)
+            num_user_moves += 1
+            break
+        else:
+            print("\n\nInvalid Move. Try Again.")
 
-get_input()
+print(f"\n\nYou completed the game in {num_user_moves} moves, and the optimum number of moves is {num_optimal_moves}.")
