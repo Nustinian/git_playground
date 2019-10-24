@@ -12,5 +12,4 @@ def make_output_dir() -> Path:
     return output_dir
 
 if __name__ == "__main__":
-    output_dir = make_output_dir()
-    
+    make_output_dir()
