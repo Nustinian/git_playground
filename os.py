@@ -3,4 +3,6 @@ import os
 myCmd = 'ls -la'
 output = os.system(myCmd)
 
-os.system("echo ", output, ">> output.txt")
+input = "echo " + output + ">> output.txt")
+
+os.system(input)
