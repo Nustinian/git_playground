@@ -12,12 +12,16 @@ def search_and_add(thread_number):
     threads_dict[thread_name] = warnings_num
     return warnings_num
 
+def report_minimum(minimum=0):
+    for key, value in threads_dict.items():
+        if value > minimum:
+            print(key)
+
 threads_dict = {}
 warnings_total = get_warnings_total()
 remaining_warnings = warnings_total
 
 print("There are " + str(warnings_total) + " warnings in the awslogs.log.")
-search_and_add(1)
 
 i = 1
 while remaining_warnings > 0:
@@ -27,3 +31,4 @@ while remaining_warnings > 0:
     remaining_warnings -= warnings_num
     i += 1
 
+report_minimum(10)
