@@ -1,7 +1,7 @@
 import os
 
 def get_warnings_total():
-    cmd = "sudo cat -n /var/log/awslogs.log" | grep "WARNING" | wc -n"
+    cmd = "sudo cat -n /var/log/awslogs.log | grep 'WARNING' | wc -n"
     total = int(os.popen(cmd).read())
     return total
 
