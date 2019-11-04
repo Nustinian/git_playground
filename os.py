@@ -20,7 +20,7 @@ print("There are " + str(warnings_total) + " warnings in the awslogs.log.")
 search_and_add(1)
 
 i = 1
-while remaining_warnings > warnings_total / 10:
+while remaining_warnings > 0:
     warnings_num = search_and_add(i)
     if warnings_num != 0:
         print("There were " + str(warnings_num) + " warnings under Thread-" + str(i) + ".")
