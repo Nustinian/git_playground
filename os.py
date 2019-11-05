@@ -13,9 +13,14 @@ def search_and_add(thread_number):
     return warnings_num
 
 def report_minimum(minimum=0):
+    report_dict = {}
     for key, value in threads_dict.items():
         if value > minimum:
-            print(key)
+            report_dict[key] = value
+    if len(report_dict) > 0:
+        print("The following threads produced more than {0} warning(s):").format(minimum)
+        for key, value in report_dict.items():
+            print(key, ": ", value, " warnings", end='\n')
 
 threads_dict = {}
 warnings_total = get_warnings_total()
@@ -32,3 +37,4 @@ while remaining_warnings > 0:
     i += 1
 
 report_minimum(10)
+
