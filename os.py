@@ -20,7 +20,7 @@ def report_minimum(minimum=0):
     if len(report_dict) > 0:
         print("The following threads produced more than {0} warning(s):").format(minimum)
         for key, value in report_dict.items():
-            print(key, ": ", value, " warnings\n")
+            print("{key}: {value} warning(s)").format(key=key, value=value)
 
 threads_dict = {}
 warnings_total = get_warnings_total()
