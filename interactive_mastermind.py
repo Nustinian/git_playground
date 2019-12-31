@@ -62,7 +62,7 @@ def report_results():
 
 print("\nLet's play Mastermind!")
 
-answer = "1234"#f'{random.randrange(0, 10**4):04}'
+answer = f'{random.randrange(0, 10**4):04}'
 guess_history = []
 result_history = []
 guess = get_guess("\nGo ahead and make your first guess. Good luck!\n")
