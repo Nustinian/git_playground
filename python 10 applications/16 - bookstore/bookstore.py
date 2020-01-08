@@ -125,7 +125,7 @@ listbox = Listbox(window, height = 6, width = 35)
 listbox.grid(row = 2, column = 0, columnspan = 2, rowspan = 6)
 
 scrollbar = Scrollbar(window, command = listbox.yview)
-scrollbar.grid(row = 4, column = 2, rowspan = 3, fill = Y)
+scrollbar.grid(row = 4, column = 2, rowspan = 3)
 
 create_table()
 #insert("Harry Potter", "J.K. Rowling", 1998, 9780590353427)
