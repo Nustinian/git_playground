@@ -8,10 +8,11 @@ def is_palindrome(number):
       return False
   return True
 
-highest_palindrome = 0
-for i in range(101, 1000):
-    for j in range(101, 1000):
-        if is_palindrome(i * j) and (i * j) > highest_palindrome:
-            highest_palindrome = i * j
+highest = 0
 
-print(highest_palindrome)
+for i in (100, 999):
+  for j in (100, 999):
+    if is_palindrome(i * j) and i * j > highest:
+      highest = i * j
+
+print(highest)
