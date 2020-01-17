@@ -8,4 +8,10 @@ def is_palindrome(number):
       return False
   return True
 
-print(is_palindrome(input("Enter number to check: ")))
+highest_palindrome = 0
+for i in range(101, 1000):
+    for j in range(101, 1000):
+        if is_palindrome(i * j) and (i * j) > highest_palindrome:
+            highest_palindrome = i * j
+
+print(highest_palindrome)
