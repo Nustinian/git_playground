@@ -9,6 +9,8 @@ def prime_factorize(number):
     factors.append(2)
   i = 3
   limit = int(sqrt(number))
+  if i > limit:
+    factors.append(number)
   while number > 1 and i <= limit:
     if number % i == 0:
       factors.append(i)
