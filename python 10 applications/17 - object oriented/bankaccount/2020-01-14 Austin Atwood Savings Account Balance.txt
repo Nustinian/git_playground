@@ -1,0 +1,5 @@
+2020/01/14 07:54:32 - Initial balance: 500 dollars
+2020/01/14 07:54:32 - Deposit: 25 dollars
+                      Current balance: 525 dollars
+2020/01/14 07:54:32 - Withdrawal: 513 dollars 
+                      Current balance: 12 dollars
