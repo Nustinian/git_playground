@@ -10,7 +10,7 @@ def create_table():
 def insert(item, quantity, price):
     connection = psycopg2.connect("dbname = 'database1' user = 'postgres' password = 'password123' host = 'localhost' port = '5432'")
     cursor = connection.cursor()
-    cursor.execute("INSERT INTO STORE VALUES(%s, %s, %s)", (item, quantity, price))
+    cursor.execute("INSERT INTO store VALUES(%s, %s, %s)", (item, quantity, price))
     connection.commit()
     connection.close()
 
