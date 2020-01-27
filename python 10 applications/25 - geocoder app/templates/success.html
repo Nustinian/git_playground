@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <title>Latitude & Longitude Appender</title>
+  <head>
+    <link href="../static/main.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <p>Thank you for your submission. <br>
+      You may download your updated file below:</p>
+      {% include btn ignore missing %} <br>
+      <a>Here are the volcanoes with longitude and latitude! <br></a>
+        <div class="output">
+          {{text | safe}} <br>
+        </div>
+    </div>
+  </body>
+</html>

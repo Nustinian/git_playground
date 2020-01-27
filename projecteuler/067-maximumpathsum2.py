@@ -1,5 +1,5 @@
 triangle = []
-with open("067-triangle.py") as file:
+with open("067-triangle.txt") as file:
     line = file.readline()
     while line:
         triangle.append([int(x) for x in line.split()])
