@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <title>Data Collector</title>
+  <head>
+    <link href="../static/main.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Collecting Heights</h1>
+      <h3>Please fill in your email and height to get statistics on users' height.</h3>
+      <div class="message">
+        {{text | safe}}
+      </div>
+      <form action="{{url_for ('success')}}" method="POST" enctype="multipart/form-data">
+        <input title="Your email will not be used for anything but sending you statistics once" placeholder="Enter your email address" type="email" name="email_name" required> <br>
+        <input title="Your height will be stored anonymously for calculating average heights in the future" placeholder="Enter your height in cm" type="number" min="100" max="220" name="height_value" required> <br>
+        <input type="file" name="file"> <br>
+        <button type="submit"> Submit </button>
+      </form>
+    </div>
+  </body>
+</html>
