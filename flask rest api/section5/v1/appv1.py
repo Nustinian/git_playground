@@ -2,6 +2,8 @@ from flask import Flask, request
 from flask_restful import Resource, Api, reqparse
 from flask_jwt import JWT, jwt_required
 from security import authenticate, identity
+from user import UserRegister, UserList
+import create_tables
 
 app = Flask(__name__)
 app.secret_key = 'notreallysecret'
@@ -16,7 +18,6 @@ class ItemList(Resource):
         return {"items": items}
 
 class Item(Resource):
-
     parser = reqparse.RequestParser()
     parser.add_argument('price', type=float, required=True, help="'price' field cannot be left blank")    
 
@@ -50,5 +51,7 @@ class Item(Resource):
 
 api.add_resource(Item, '/item/<string:name>')
 api.add_resource(ItemList, '/items')
+api.add_resource(UserRegister, '/register')
+api.add_resource(UserList, '/userlist')
 
 app.run(port=5000, debug=True)

@@ -59,8 +59,7 @@ class UserList(Resource):
         connection = sqlite3.connect('data.db')
         cursor = connection.cursor()
         msg = ""
-        query = "SELECT * FROM users"
-        for row in cursor.execute(query):
+        for row in cursor.execute("SELECT * FROM users"):
             msg += str(row)
         connection.close()
         return {"message": f"{msg}"}, 200
