@@ -1,0 +1,13 @@
+2.3.3.4: if it doesn't go right, send logs
+3.5.3.1: if nothing shows up, do 3.5.3.2
+3.6.3.1, 2: if it doesn't go right, do 3.13
+3.7.3.1: skip 2 and 3
+3.8.3.1: ??? never do 2-4?
+3.10: skip 2 and 3, if something goes wrong, 3.13
+3.11: skip 2 and 3, if something goes wrong, 3.13
+3.14.4: go to jump to either A or B, and maybe do 3.14.4.5
+3.15.4.14: maybe repeat a bunch
+3.17.1: skip all if working
+4.12: end early, 3.13
+
+check if already logged in...
